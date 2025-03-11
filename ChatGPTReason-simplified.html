@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post-Workout Meal Suggestions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    #suggestion {
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Post-Workout Meal Suggestions</h1>
+    <label for="workoutType">Select your workout type:</label>
+    <select id="workoutType">
+      <option value="weightlifting">Weight Lifting</option>
+      <option value="swimming">Swimming</option>
+      <option value="biking">Biking</option>
+      <option value="running">Running</option>
+    </select>
+    <button onclick="generateSuggestion()">Get Meal Suggestion</button>
+    <div id="suggestion"></div>
+  </div>
+
+  <script>
+    // Pre-defined meal suggestions for each workout type using only your available ingredients.
+    const suggestions = {
+      weightlifting: [
+        "Grilled salmon with quinoa, steamed broccoli, roasted potatoes, and a drizzle of lemon juice.",
+        "Tofu scramble with spinach, onions, mushrooms, and whole grain bread.",
+        "Lentil and red bean stew with brown rice and a side salad of spinach, avocado, and feta cheese.",
+        "Black bean and quinoa bowl with broccoli, avocado, and lemon juice dressing.",
+        "Egg omelette with spinach, onions, and mushrooms, served with whole grain bread.",
+        "Whole grain bread topped with peanut butter and sliced banana."
+      ],
+      swimming: [
+        "Salmon salad with avocado, spinach, onions, and a drizzle of lemon juice.",
+        "Tofu stir-fry with broccoli, mushrooms, and quinoa.",
+        "Whole grain pasta mixed with red beans, spinach, and steamed broccoli.",
+        "Sweet potato and lentil bowl with a side of broccoli.",
+        "Eggs over brown rice with sautéed spinach and mushrooms.",
+        "Bulgur and lentil salad with spinach, red beans, and avocado."
+      ],
+      biking: [
+        "Whole grain bread with peanut butter and banana slices.",
+        "Sweet potato and black bean wrap using whole grain bread.",
+        "Brown rice bowl with red beans, broccoli, and a squeeze of lemon juice.",
+        "Quinoa salad with lentils, spinach, and avocado.",
+        "Millet bowl with walnuts, pecans, and apple slices.",
+        "Bulgur salad with black beans, spinach, avocado, and a sprinkle of walnuts."
+      ],
+      running: [
+        "Whole grain bread with peanut butter and sliced apples.",
+        "Banana and oat milk smoothie with a handful of walnuts.",
+        "Brown rice and red bean bowl with spinach and avocado.",
+        "Sweet potato and black bean salad with a drizzle of lemon juice.",
+        "Egg scramble with spinach, onions, and mushrooms served with whole grain bread.",
+        "Tofu and broccoli stir-fry with quinoa.",
+        "Bulgur bowl with red beans, spinach, and a side of whole grain bread."
+      ]
+    };
+
+    // Function to generate a random meal suggestion based on selected workout type.
+    function generateSuggestion() {
+      const type = document.getElementById("workoutType").value;
+      const mealArray = suggestions[type];
+      const randomIndex = Math.floor(Math.random() * mealArray.length);
+      document.getElementById("suggestion").innerText = mealArray[randomIndex];
+    }
+  </script>
+</body>
+</html>
