@@ -14,5 +14,4 @@ The meal suggestions use common ingredients and provide nutritional benefits tai
 4. Click "Generate Meal Suggestions"
 5. Get personalized meal recommendations with instructions and nutritional benefits
 
-Try it now: [Post-Workout Meal Generator](https://ChatGPT.reason.post-workout-meal-generator
-/.github.io/post-workout-meal-generator/)
+Try it now: [Post-Workout Meal Generator](https://berlimel.github.io/ChatGPT.reason.post-workout-meal-generator/)
